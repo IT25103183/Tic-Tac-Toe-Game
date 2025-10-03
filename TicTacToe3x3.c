@@ -1,16 +1,15 @@
 #include <stdio.h>
 
-char c[9];
+char board[3][3];
 
-void board()
+void boardprint()
 {
 	printf(" --- --- --- \n");
-	printf("| %c | %c | %c |\n", c[0], c[1], c[2]);
-	printf(" --- --- --- \n");
-	printf("| %c | %c | %c |\n", c[3], c[4], c[5]);
-	printf(" --- --- --- \n");
-	printf("| %c | %c | %c |\n", c[6], c[7], c[8]);
-	printf(" --- --- --- \n");
+	for(int i=0;i<3;i++)
+	{
+		printf("| %c | %c | %c |\n", board[i][0], board[i][1], board[i][2]);
+		printf(" --- --- --- \n");
+	}
 }
 
 char user1()
@@ -31,101 +30,111 @@ char user2()
 
 void check(char n,char input)
 {
-	int i;
-	for(i=0;i<9;i++)
+	int i,j;
+	for(i=0;i<3;i++)
 	{
-		if(c[i] == n)
+		for(j=0;j<3;j++)
 		{
-			c[i] = input;
-			break;
+			if(board[i][j] == n)
+			{
+				board[i][j] = input;
+				return;
+			}
 		}
 	}
 }
 
 int winx()
 {	
-	if(c[0]=='X' && c[1]=='X' && c[2]=='X')
+	if(board[0][0]=='X' && board[0][1]=='X' && board[0][2]=='X')
 	{
 		return 1;
 	}
-	else if(c[3]=='X' && c[4]=='X' && c[5]=='X')
+	else if(board[1][0]=='X' && board[1][1]=='X' && board[1][2]=='X')
 	{
 		return 1;
 	}
-	else if(c[6]=='X' && c[7]=='X' && c[8]=='X')
+	else if(board[2][0]=='X' && board[2][1]=='X' && board[2][2]=='X')
 	{
 		return 1;
 	}
-	else if(c[0]=='X' && c[3]=='X' && c[6]=='X')
+	else if(board[0][0]=='X' && board[1][0]=='X' && board[2][0]=='X')
 	{
 		return 1;
 	}
-	else if(c[1]=='X' && c[4]=='X' && c[7]=='X')
+	else if(board[0][1]=='X' && board[1][1]=='X' && board[2][1]=='X')
 	{
 		return 1;
 	}
-	else if(c[2]=='X' && c[5]=='X' && c[8]=='X')
+	else if(board[0][2]=='X' && board[1][2]=='X' && board[2][2]=='X')
 	{
 		return 1;
 	}
-	else if(c[1]=='X' && c[4]=='X' && c[8]=='X')
+	else if(board[0][0]=='X' && board[1][1]=='X' && board[2][2]=='X')
 	{
 		return 1;
 	}
-	else if(c[2]=='X' && c[4]=='X' && c[6]=='X')
+	else if(board[0][2]=='X' && board[1][1]=='X' && board[2][0]=='X')
 	{
 		return 1;
 	}
+	return 0;
 }
 
 int wino()
 {
-	if(c[0]=='O' && c[1]=='O' && c[2]=='O')
+	if(board[0][0]=='O' && board[0][1]=='O' && board[0][2]=='O')
 	{
-		return 0;
+		return 1;
 	}
-	else if(c[3]=='O' && c[4]=='O' && c[5]=='O')
+	else if(board[1][0]=='O' && board[1][1]=='O' && board[1][2]=='O')
 	{
-		return 0;
+		return 1;
 	}
-	else if(c[6]=='O' && c[7]=='O' && c[8]=='O')
+	else if(board[2][0]=='O' && board[2][1]=='O' && board[2][2]=='O')
 	{
-		return 0;
+		return 1;
 	}
-	else if(c[0]=='O' && c[3]=='O' && c[6]=='O')
+	else if(board[0][0]=='O' && board[1][0]=='O' && board[2][0]=='O')
 	{
-		return 0;
+		return 1;
 	}
-	else if(c[1]=='O' && c[4]=='O' && c[7]=='O')
+	else if(board[0][1]=='O' && board[1][1]=='O' && board[2][1]=='O')
 	{
-		return 0;
+		return 1;
 	}
-	else if(c[2]=='O' && c[5]=='O' && c[8]=='O')
+	else if(board[0][2]=='O' && board[1][2]=='O' && board[2][2]=='O')
 	{
-		return 0;
+		return 1;
 	}
-	else if(c[0]=='O' && c[4]=='O' && c[8]=='O')
+	else if(board[0][0]=='O' && board[1][1]=='O' && board[2][2]=='O')
 	{
-		return 0;
+		return 1;
 	}
-	else if(c[2]=='O' && c[4]=='O' && c[6]=='O')
+	else if(board[0][2]=='O' && board[1][1]=='O' && board[2][0]=='O')
 	{
-		return 0;
+		return 1;
 	}
+	return 0;
 }
 
 int main()
 {
-	int i;
+	int i,j;
+	int num = 1;
 	int y = 0;
 	char m;
 	
-	for(i=0;i<9;i++)
+	for(i=0;i<3;i++)
 	{
-		c[i] = i + '1';
+		for(j=0;j<3;j++)
+		{
+			board[i][j] = '0' + num;
+			num++;
+		}
 	}
 
-	board();
+	boardprint();
 
 	for(i=0;i<9;i++)
 	{
@@ -133,13 +142,13 @@ int main()
 		{
 			m = user1();
 			check(m,'X');
-			board();
+			boardprint();
 		}
 		else
 		{			
 			m = user2();
 			check(m,'O');
-			board();
+			boardprint();
 		}
 		
 		y = winx();
@@ -152,10 +161,14 @@ int main()
 
 		y = wino();
 		
-		if(y==0)
+		if(y==1)
 		{
 			printf("PLAYER 2 WINS\n");
 			break;
+		}
+		if(i == 8)
+		{
+			printf("DRAW!\n");
 		}
 	}
 

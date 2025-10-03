@@ -1,0 +1,59 @@
+=== TIC-TAC-TOE GAME LOG ===
+Board Size: 3 x 3
+Number of Players: 3
+
+Move 1: Player X -> (1, 1)
+Board State:
+[ ][ ][ ]
+[ ][X][ ]
+[ ][ ][ ]
+
+Move 2: Player O -> (0, 1)
+Board State:
+[ ][O][ ]
+[ ][X][ ]
+[ ][ ][ ]
+
+Move 3: Player Z -> (0, 0)
+Board State:
+[Z][O][ ]
+[ ][X][ ]
+[ ][ ][ ]
+
+Move 4: Player X -> (0, 2)
+Board State:
+[Z][O][X]
+[ ][X][ ]
+[ ][ ][ ]
+
+Move 5: Player O -> (2, 2)
+Board State:
+[Z][O][X]
+[ ][X][ ]
+[ ][ ][O]
+
+Move 6: Player Z -> (2, 0)
+Board State:
+[Z][O][X]
+[ ][X][ ]
+[Z][ ][O]
+
+Move 7: Player X -> (1, 0)
+Board State:
+[Z][O][X]
+[X][X][ ]
+[Z][ ][O]
+
+Move 8: Player O -> (1, 2)
+Board State:
+[Z][O][X]
+[X][X][O]
+[Z][ ][O]
+
+Move 9: Player Z -> (2, 1)
+Board State:
+[Z][O][X]
+[X][X][O]
+[Z][Z][O]
+
+GAME OVER: DRAW!
