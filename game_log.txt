@@ -1,59 +1,93 @@
 === TIC-TAC-TOE GAME LOG ===
-Board Size: 3 x 3
-Number of Players: 3
+Board Size: 5 x 5
+Number of Players: 2
 
-Move 1: Player X -> (1, 1)
+Move 1: Player X -> (2, 2)
 Board State:
-[ ][ ][ ]
-[ ][X][ ]
-[ ][ ][ ]
+[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]
+[ ][ ][X][ ][ ]
+[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]
 
-Move 2: Player O -> (0, 1)
+Move 2: Player O -> (0, 4)
 Board State:
-[ ][O][ ]
-[ ][X][ ]
-[ ][ ][ ]
+[ ][ ][ ][ ][O]
+[ ][ ][ ][ ][ ]
+[ ][ ][X][ ][ ]
+[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]
 
-Move 3: Player Z -> (0, 0)
+Move 3: Player X -> (2, 0)
 Board State:
-[Z][O][ ]
-[ ][X][ ]
-[ ][ ][ ]
+[ ][ ][ ][ ][O]
+[ ][ ][ ][ ][ ]
+[X][ ][X][ ][ ]
+[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]
 
-Move 4: Player X -> (0, 2)
+Move 4: Player O -> (0, 0)
 Board State:
-[Z][O][X]
-[ ][X][ ]
-[ ][ ][ ]
+[O][ ][ ][ ][O]
+[ ][ ][ ][ ][ ]
+[X][ ][X][ ][ ]
+[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]
 
-Move 5: Player O -> (2, 2)
+Move 5: Player X -> (2, 4)
 Board State:
-[Z][O][X]
-[ ][X][ ]
-[ ][ ][O]
+[O][ ][ ][ ][O]
+[ ][ ][ ][ ][ ]
+[X][ ][X][ ][X]
+[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]
 
-Move 6: Player Z -> (2, 0)
+Move 6: Player O -> (0, 2)
 Board State:
-[Z][O][X]
-[ ][X][ ]
-[Z][ ][O]
+[O][ ][O][ ][O]
+[ ][ ][ ][ ][ ]
+[X][ ][X][ ][X]
+[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]
 
-Move 7: Player X -> (1, 0)
+Move 7: Player X -> (1, 1)
 Board State:
-[Z][O][X]
-[X][X][ ]
-[Z][ ][O]
+[O][ ][O][ ][O]
+[ ][X][ ][ ][ ]
+[X][ ][X][ ][X]
+[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]
 
-Move 8: Player O -> (1, 2)
+Move 8: Player O -> (1, 3)
 Board State:
-[Z][O][X]
-[X][X][O]
-[Z][ ][O]
+[O][ ][O][ ][O]
+[ ][X][ ][O][ ]
+[X][ ][X][ ][X]
+[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]
 
-Move 9: Player Z -> (2, 1)
+Move 9: Player X -> (2, 1)
 Board State:
-[Z][O][X]
-[X][X][O]
-[Z][Z][O]
+[O][ ][O][ ][O]
+[ ][X][ ][O][ ]
+[X][X][X][ ][X]
+[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]
 
-GAME OVER: DRAW!
+Move 10: Player O -> (0, 1)
+Board State:
+[O][O][O][ ][O]
+[ ][X][ ][O][ ]
+[X][X][X][ ][X]
+[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]
+
+Move 11: Player X -> (2, 3)
+Board State:
+[O][O][O][ ][O]
+[ ][X][ ][O][ ]
+[X][X][X][X][X]
+[ ][ ][ ][ ][ ]
+[ ][ ][ ][ ][ ]
+
+GAME OVER: Player X WINS!
